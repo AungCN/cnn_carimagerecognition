@@ -3,6 +3,13 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 from PIL import Image
+import os
+import gdown
+
+model_path = "model.h5"
+if not os.path.exists(model_path):
+    url = "https://drive.google.com/file/d/1QN8gyLqo4A2-lZwHlbsETyJcfQusMTS3/view?usp=sharing"
+    gdown.download(url, model_path, quiet=False)
 
 # Set Streamlit app configuration
 st.set_page_config(page_title="Car Classifier", layout="centered")

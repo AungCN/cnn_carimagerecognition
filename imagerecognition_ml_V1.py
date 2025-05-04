@@ -37,7 +37,7 @@ uploaded_file = st.file_uploader("Upload a car image (JPG/PNG)", type=["jpg", "j
 
 if uploaded_file is not None:
     img = Image.open(uploaded_file)
-    st.image(img, caption="Uploaded Image", use_column_width=True)
+    st.image(img, caption="Uploaded Image", use_container_width=True)
 
     img = img.resize((150, 150))
     img_array = image.img_to_array(img)
